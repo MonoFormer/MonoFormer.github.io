@@ -106,13 +106,41 @@ state-of-the-art methods as well as maintains the text generation capability.
 
     <h1>Architecture</h1>
     <img style="width: 80%;" src="./resources/otv3.png"
-         alt="xxx"/>
+         alt="Architecture"/>
 
     <br>
     <p style="width: 80%;">
         Our approach MonoFormer trains the autoregressive transformer and the diffusion transformer, which share the weights, and uses causal attention mask and bidirectional attention mask,
 respectively. During training, the input of the transformer for autoregression is the text token embeddings, and the output is embeddings that are further processed for text generation. The input for
 diffusion is the noised latent embeddings, and the output is embeddings that are used to predict the noise.
+    <br><br>  
+    <hr>
+
+    <h1>Quantative Experiments</h1>
+    <img style="width: 80%;" src="./resources/exp_1.png"
+         alt="Quantative Experiments"/>
+    <br>
+    <p style="width: 80%;">
+        Performance on ImageNet 256×256 benchmark.
+    <br><br>  
+    <hr>
+
+    <img style="width: 80%;" src="./resources/exp_2.png"
+         alt="Quantative Experiments"/>
+    <br>
+    <p style="width: 80%;">
+        Performance on commonsense reasoning tasks.
+    <br><br>  
+    <hr>
+
+   <img style="width: 80%;" src="./resources/exp_3.png"
+         alt="Quantative Experiments"/>
+    <br>
+    <p style="width: 80%;">
+        (a) The effect of transformer initialization for image generation, measured using the FiD-
+10K metric on ImageNet. (b) The effect of transformer initialization for text generation, measured
+by the average commonsense reasoning score. (c) The effect of bidirectional attention mask for
+image generation.
     <br><br>  
     <hr>
 
